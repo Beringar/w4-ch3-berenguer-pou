@@ -14,8 +14,7 @@
 
 - Renderizar una lista de botones pasando a los botones un texto
 - Pasar acciones a los botones de la lista
-- Habilitar / Deshabilitar las acciones sobre los botones
-- Modificar el estado de la llamada (calling/ended)
+- Habilitar / Deshabilitar los botones actions
 
 ### Action
 
@@ -38,10 +37,7 @@
 - Renderizar el componente Display
 - Renderizar el componente Actions
 - Renderizar el componente Keyboard
-- Modificar el estado de la partida a ganado cuando se hayan acertado todas las letras de la palabra
-- Modificar el estado de la partida a perdido cuando el número de fallos sea 11
-- Añadir una letra al listado de letras usadas cuando se clique por primera vez en una letra
-- Incrementar el número de fallos cuando la letra clicada no esté en la palabra
+- Modificar el estado de la llamada (calling/ended)
 
 ### TelefonoContextProvider
 
