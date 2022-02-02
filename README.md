@@ -51,13 +51,9 @@
 ## Datos y acciones
 
 - Número de teléfono (variable de estado) -> Context
-
 * Añadir una número -> App la define
-
 - Estado de la llamada (booelano) -> Context
-
 * Modificarlo -> App lo define
-
 - Lista de números del teclado y texto de la tecla borrar (no es de estado) -> Keyboard
 - Lista de acciones y texto de los botones action (no es de estado) -> Keyboard
 
