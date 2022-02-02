@@ -1,28 +1,34 @@
-# Documentación Teléfono React v 1.0 (2 feb 18:30)
+# Documentación Teléfono React v 1.0 (2 feb 19:00h)
 
 ## Componentes y responsabilidades:
 
 ### Info
+
 - Renderizar una frase (de dos) en función del estado de la llamada (calling/ended)
 
 ### Display
+
 - Renderizar un número recibido
 
 ### Actions
-- Renderizar una lista de botones pasando a los botones un texto 
-- Pasar acciones a los botones de la lista 
+
+- Renderizar una lista de botones pasando a los botones un texto
+- Pasar acciones a los botones de la lista
 - Habilitar / Deshabilitar las acciones sobre los botones
 - Modificar el estado de la llamada (calling/ended)
 
 ### Action
+
 - Renderizar un botón con un texto recibido
 - Ejecutar en el click la acción recibida
 
 ### Keyboard
+
 - Renderizar una lista de botones pasando a los botones un número o texto
 - Asignar a estos botones las acciones: a)añadir número paras los numeros 0-9 b)borrar número para delete
 
 ### Key
+
 - Renderizar un botón con un número recibido
 - Cuando haya un clic sobre un botón, llamar a la acción recibida
 
@@ -30,7 +36,7 @@
 
 - Renderizar el componente Info
 - Renderizar el componente Display
-- Renderizar el componente Actions 
+- Renderizar el componente Actions
 - Renderizar el componente Keyboard
 - Modificar el estado de la partida a ganado cuando se hayan acertado todas las letras de la palabra
 - Modificar el estado de la partida a perdido cuando el número de fallos sea 11
