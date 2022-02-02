@@ -1,4 +1,4 @@
-# Documentación Teléfono React v 1.0 (2 feb 19:00)
+# Documentación Teléfono React v 1.0 (2 feb 19:00h)
 
 ## Componentes y responsabilidades:
 
