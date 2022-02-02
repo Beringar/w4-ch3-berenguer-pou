@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Documentación Teléfono React v 1.0 (2 feb 18:30)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Componentes y responsabilidades:
 
-## Available Scripts
+### Info
+- Renderizar una frase (de dos) en función del estado de la llamada (calling/ended)
 
-In the project directory, you can run:
+### Display
+- Renderizar un número recibido
 
-### `npm start`
+### Actions
+- Renderizar una lista de botones pasando a los botones un texto 
+- Pasar acciones a los botones de la lista 
+- Habilitar / Deshabilitar las acciones sobre los botones
+- Modificar el estado de la llamada (calling/ended)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Action
+- Renderizar un botón con un texto recibido
+- Ejecutar en el click la acción recibida
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Keyboard
+- Renderizar una lista de botones pasando a los botones un número o texto
+- Asignar a estos botones las acciones: a)añadir número paras los numeros 0-9 b)borrar número para delete
 
-### `npm test`
+### Key
+- Renderizar un botón con un número recibido
+- Cuando haya un clic sobre un botón, llamar a la acción recibida
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### App
 
-### `npm run build`
+- Renderizar el componente Info
+- Renderizar el componente Display
+- Renderizar el componente Actions 
+- Renderizar el componente Keyboard
+- Modificar el estado de la partida a ganado cuando se hayan acertado todas las letras de la palabra
+- Modificar el estado de la partida a perdido cuando el número de fallos sea 11
+- Añadir una letra al listado de letras usadas cuando se clique por primera vez en una letra
+- Incrementar el número de fallos cuando la letra clicada no esté en la palabra
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### TelefonoContextProvider
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Renderizar el componente App
+- Almacenar las variables de estado en un hook Context (accesibles a todos sus children)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Datos y acciones
 
-### `npm run eject`
+- Número de teléfono (variable de estado) -> Context
+* Añadir una número -> App la define
+- Estado de la llamada (booelano) -> Context
+* Modificarlo -> App lo define
+- Lista de números del teclado y texto de la tecla borrar (no es de estado) -> Keyboard
+- Lista de acciones y texto de los botones action (no es de estado) -> Keyboard
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Descripción de requerimientos / (Lógica)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Sólo se verá o el botón Llamar o el botón Colgar, nunca los dos a la vez.
+- No se puede introducir un número de más de 9 cifras.
+- El botón Llamar sólo se puede pulsar si el número tiene 9 cifras.
+- Cuando tenga 9 cifras el botón debe tener la clase "active".
+- El mensaje superior "Llamando..." sólo aparece cuando se pulsa el botón "Llamar" y mientras dure la llamada.
+- Usa la clase "off" para controlar su visibilidad (el elemento HTML correspondiente debe seguir estando, aunque no se vea).
+- Al pulsar el botón "Llamar", éste debe desaparecer del DOM y debe aparecer en su lugar el botón "Colgar". El teclado tiene que quedar deshabilitado.
+- Al pulsar el botón "Colgar", éste debe desaparecer y debe aparecer en su lugar el botón "Llamar".
+- El teclado tiene que habilitarse.
+- Además, se debe borrar el número de teléfono.
+- Si no ocurre nada tras cinco segundos de llamada, ésta se debe colgar automáticamente.
