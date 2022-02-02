@@ -1,6 +1,6 @@
-const Key = ({ number, actionOnClick }) => {
+const Key = ({ number, className, actionOnClick }) => {
   return (
-    <li className="key" onClick={() => actionOnClick(number)}>
+    <li className={className} onClick={() => actionOnClick(number)}>
       {number}
     </li>
   );
