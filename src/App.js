@@ -1,11 +1,12 @@
 import "./App.css";
 import Actions from "./components/Actions/Actions";
+import Info from "./components/Info/Info";
 import Keyboard from "./components/Keyboard/Keyboard";
 
 function App() {
   return (
     <div className="container">
-      <span className="message">Calling...</span>
+      <Info className="message" message="Calling..." />
       <main className="phone">
         <div className="keyboard-container">
           <Keyboard
