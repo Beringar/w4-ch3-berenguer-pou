@@ -1,6 +1,6 @@
 const Action = ({ text, className, actionOnClick }) => {
   return (
-    <a href={text} className={className} actionOnClick={actionOnClick}>
+    <a href={text} className={className} onClick={actionOnClick}>
       {text}
     </a>
   );
