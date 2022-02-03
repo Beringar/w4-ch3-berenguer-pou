@@ -1,4 +1,5 @@
 import Action from "../Action/Action";
+import Display from "../Display/Display";
 
 const Actions = ({ actionOnClickCall, actionOnClickHang }) => {
   const telephoneNumber = "8798798";
@@ -6,7 +7,7 @@ const Actions = ({ actionOnClickCall, actionOnClickHang }) => {
   return (
     <>
       <div className="actions">
-        <span className="number">667359961</span>
+        <Display className="number" />
         {telephoneNumber > 8 && (
           <Action
             text="Call"
