@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import Key from "./Key";
 
 describe("Given a Key component", () => {
-  describe("When instantiated with number 8", () => {
+  describe("When instantiated with number '8'", () => {
     test("It should display an element with text '8'", () => {
       const key = 8;
 

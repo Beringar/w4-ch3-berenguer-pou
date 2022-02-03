@@ -1,7 +1,9 @@
-const Key = ({ number, className, actionOnClick }) => {
+const Key = ({ text, className, actionOnClick }) => {
   return (
-    <li className={className} onClick={() => actionOnClick(number)}>
-      {number}
+    <li>
+      <button className={className} onClick={() => actionOnClick(text)}>
+        {text}
+      </button>
     </li>
   );
 };
